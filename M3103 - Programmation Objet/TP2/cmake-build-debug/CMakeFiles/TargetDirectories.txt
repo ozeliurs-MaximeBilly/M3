@@ -1,3 +1,0 @@
-/amuhome/b20022165/M3/M3103 - Programmation Objet/TP2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/amuhome/b20022165/M3/M3103 - Programmation Objet/TP2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/amuhome/b20022165/M3/M3103 - Programmation Objet/TP2/cmake-build-debug/CMakeFiles/TP2b.dir

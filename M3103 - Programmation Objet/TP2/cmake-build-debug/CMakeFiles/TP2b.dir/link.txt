@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/TP2b.dir/main.cpp.o  -o TP2b 
