@@ -22,11 +22,6 @@ public:
 
     //ajout en tête de liste CNode (T Data, CNode* Next){
     void push_front (const T & val){
-        if (m_Head == nullptr) {
-            m_Head = new CNode<T>(val, m_Head);
-            m_Tail = m_Head;
-            return;
-        }
         m_Head = new CNode<T>(val, m_Head);
     }
 
@@ -45,18 +40,6 @@ public:
             }
         }
         return nullptr;
-    }
-
-    //recherche d'un élément dans la liste, renvoie le pointeur du maillon si l'élément est présent, nullptr sinon
-    CNode<T>* FindParent (CNode<T>* Maillon) const {
-        // Trouver le parent de Maillon
-        CNode<T> *CurrentParent = nullptr;
-        for (CNode<T> *Current(this->m_Head); Current; Current = Current->GetNextNode()) {
-            if (Maillon == Current) {
-                return CurrentParent;
-            }
-            CurrentParent = Current;
-        }
     }
 
     //ajout d'une valeur après un maillon de la liste
@@ -85,9 +68,9 @@ public:
 
     //ajout d'une valeur a la fin de la liste
     void push_back (const T & val){
-        CNode<T>* temp = m_Tail;
-        m_Tail = new CNode<T>(val, nullptr);
-        temp->SetNextNode(m_Tail);
+        CNode<T>* temp = new CNode<T> (val, NULL);
+        m_Tail->SetNextNode(temp);
+        m_Tail = temp;
     }
 };
 

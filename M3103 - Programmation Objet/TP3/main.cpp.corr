@@ -1,0 +1,92 @@
+#include <iostream>
+#include <memory>
+
+#include "node.hpp"
+#include "list.hpp"
+
+using namespace std;
+
+//utilisation des noeuds
+void ListeSimple (void)
+{
+    std::cout << "ListeSimple : \n\n";
+
+    shared_ptr<CNode <int>> Tete /*= nullptr*/;
+
+    // Le dernier element cree est toujours le premier de la liste
+
+
+    for (unsigned i (0); i < 5; ) {
+        shared_ptr<CNode <int>> tmp (new CNode <int> (i++, Tete));
+        //Tete = new CNode<int> (i++, Tete);
+        Tete = tmp;
+        cout << Tete << endl;
+    }
+
+    for (shared_ptr<CNode <int>> Ptr (Tete); Ptr; Ptr = Ptr->GetNextNode ())
+        cout << Ptr->GetData() << "; ";
+
+    std::cout << '\n';
+
+    // Dans cette version, le destructeur de C1Link detruit son
+    //   suivant donc la destruction de la liste est recursive
+
+   // delete Tete;
+
+}// ListeSimple ()
+
+//utilisation des listes
+void ListeSimpleV2 ()
+{
+    cout << "ListeSimpleV2 : \n\n";
+
+    CList<int> AList;
+
+
+    /*insertion*/
+    for (unsigned i = 20; i; i -= 2) AList.AddAfter (AList.Begin (), i);
+    AList.Show();
+
+
+    for (unsigned i (0); i < 5; )
+    {
+        AList.push_front (i++);
+    }
+
+    AList.Show ();
+
+    for (unsigned i (6); i < 10; )
+    {
+        AList.push_back (i++);
+    }
+
+    AList.Show ();
+
+
+    /*Recherche */
+    cout << "Saisir l'entier a chercher : ";
+    int i;
+    cin >>i;
+    /*shared_ptr<CNode<int>>*/ auto ptr = AList.Find (i);
+    cout << ((nullptr != ptr)?  " " : "non ") << "trouve" << endl;
+    if (nullptr != ptr)
+        cout << "valeur trouvée" << ptr -> GetData () << endl;
+
+    /*Suppression*/
+    AList.Delete (AList.Find (2));
+    AList.Delete (AList.Find (12));
+    AList.Delete (AList.Find (20));
+    AList.Show ();
+
+
+
+}
+
+
+int main()
+{
+//    std::cout << "Hello World!" << std::endl;
+//    ListeSimple();
+    ListeSimpleV2 ();
+    return 0;
+}

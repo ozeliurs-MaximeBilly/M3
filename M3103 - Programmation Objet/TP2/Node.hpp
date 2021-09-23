@@ -10,11 +10,13 @@ private:
     T m_Data;
     CNode* m_Next;
 public:
+
     //constructor
-    CNode (T Data, CNode* Next){
+    CNode (const T & Data = T(), CNode* Next = nullptr){
         m_Data = Data;
         m_Next = Next;
     };
+
     //destructor
     ~CNode (){
         std::cout << m_Data << std::endl;
