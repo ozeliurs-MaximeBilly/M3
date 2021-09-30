@@ -48,13 +48,15 @@ public:
     }
 
     void add(const T& data){
-        if (right == nullptr) {
-            right.reset(new CNode<T>(data));
-        } else if (left == nullptr) {
-            left.reset(new CNode<T>(data));
-        } else {
-            if (rand() % 2 == 0) {
+        if (data > this->data) {
+            if (right == nullptr) {
+                right.reset(new CNode<T>(data));
+            } else {
                 right->add(data);
+            }
+        } else if (data < this->data) {
+            if (left == nullptr) {
+                left.reset(new CNode<T>(data));
             } else {
                 left->add(data);
             }
@@ -62,9 +64,9 @@ public:
     }
 
     void show(){
+        if (left != nullptr) {left->show();}
         std::cout << data << "\n";
         if (right != nullptr) {right->show();}
-        if (left != nullptr) {left->show();}
     }
 };
 

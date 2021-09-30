@@ -25,6 +25,7 @@ public:
     }
 
     void add(const T &data) {
+        if
         root->add(data);
     }
 

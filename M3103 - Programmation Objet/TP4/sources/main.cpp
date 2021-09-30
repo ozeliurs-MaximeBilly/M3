@@ -8,4 +8,5 @@ int main() {
     test.add(3);
     test.add(6);
     test.show();
+    std::cout << test.find(5) << "\n";
 }
