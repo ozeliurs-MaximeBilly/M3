@@ -1,0 +1,40 @@
+------------------------------ en-tête -----------------------------------------
+HLEN............. : 5 (20 octets d'en-tête sans option)
+Longueur totale.. : 2420
+Protocole........ : 17
+Identification... : 12345
+Bit More......... : 1
+Déplacement...... : 300
+Adresse IP Source : 139.124.187.2
+Adresse IP Dest.. : 139.124.187.4
+------------------------------ données -----------------------------------------
+    ,+=     :=itYVRXRRRRXVXXVYVXt,                ,:=+tIYYVVt:,tXRBY:,YV;      
+::   ;=, , ,:;=iIYXXXXRXXVVIIYYi,                   :;+tIVXI; ;YRXBV; +XY=     
+,,    +; ::;;==+tIYYYVVVVYtttt=                     ,:=iIVYt;,=YRRBX+  YBV;    
+   :  ti,;=++iiitttttIYYYIi+:                         :=tVYi;;tXRXRVY= =VY+,   
+  ,  ;Y+ :=+itttIIYYYYVYYI:,                        ,,,;iIIt+;iVXVXRRY; ;Yi:   
+,,, :ti:,;;+tYVXXXVXXVVYi,                        ,:;==+itYIt=+IXRVXBRI:  ,    
+:  ;II; ,==+tYVVVVVVVVYt;                         ,:=+++itIIIiitYVRRRRV+,      
+: ,VY:::,=+iIYYVVXVIIVI;                           ,:;=+itIIIIt+==IVXRXI;      
+  +V;:; ;+itIYVVVVYVYYt, ,         :     ,         ,:=+itIIVVVYIi=;=IRX+,    , 
+  It:,;,;=itIVVVVVYIVY;           , ::  , ,         ,:;+itYVXXXXYII=:;=:   ,+Y 
+ ,X;:;;=;+tIYVXXVVYYVt  ,         ,:IX+,, ,,,,,    ,,:;+itIYXXXRXVVYVVt,  :=tY 
+,=R,;+;=;itIYVXXVVYRI,             =IXR+ ,,,,,,     ,;=++iIYVXXRRXVVXVi,  +IVX 
+ V+=:;==+tIIYVXXVVXV= ,           ,;VIVR; ,,,,,,  ,,,,:=++itIVXXXVXXt:   :YYVX 
+IX::;===iIYYVVXXVVVt,  , ,        ,:IIiXY,  ,,,,,,,,,::=++iitIYVVXI;  :  IRXVR 
+RI,:===+tIYYVXRXXVV;    ,        , :it;iXt ,,,   ,::::;=++iiiIVVt= ,    :IRXXM 
+V;:;;;=tIIYYVXRRXXI     ,       ,, : ==,IX=+=;,   ::::;=++=itIi=:     ,,=Vt;=V 
++;:;=+itYXVXRRBBRRi,    ,     ,,,  ,::,    ,;+tti+,::;;=+iiii=,        ,iX     
+;,;;=+iIVXXXRBBBRR=  ,  , ,   ,,,,,,,    ,,    ,;++;:;=++==:,          ,tM;    
+;:;=+iIYVXXRRBBBRR;  ,  , ,  ,,,,,          ,,     ,;===;;    ,,        =Y;  , 
+:;;=itIYXRRRBBBBRR:  ,  :,  ,:::,                    ,;;,            ,,,:;     
+:==+tIYVXRXRRWBRMV,   ,,,  ,::,                        ,,,  ,        :::+      
+;++iIYVXRRRBRMBRMY    ,,,,,,,                           ,;,        ,,;,,=      
+=+itIVXXRBRMBBBBMt    ,:,,,,         ,,                   =,    ,;:; ,,;t,     
++=iIYVXRRBBWBBRMWi   ,,:::           ,,,  ;:,      ,::    =;, ,=+=;tiiiVWV=:   
++itIVXXRBBBMBMBBMi   ,::,        ,;+, ,:  =tXtIt,=:::;;===,,:=++tVVXBBBRRBBVt+ 
+itIYVXRRBBMMRMMBB+  ,::,          iRV:     =t+iVIYItiitt+;;==;;IBWXRBBRRBBRXYI 
+iIIYXXRRBBMMRMMBB+  :;: ,=:       ,tRI     ,;I+,=+iii+==;;:, ;YWWRBBBBBBBBRXVY 
+tIYVXRRRBBBMBMBBMi  :=: =V=:     ,:;XR=   ,  +==V=Yt;:;iYVVYXBWBRBBBBMMMBRRVYY 
+IYVVXRBBBBMMMMMMXt ,++:=IYi,,,  , ,;YRI, ,,  ;=;:;::,;YVYBRRBBBMBBBMMMBBBBXXXX 
+YYYVXRBBBBBBBBBBXI::=+=iVV+,,:  ,, ,iBR= ,,  :=:    =YVRMBBBBBBBBBMMMMBBBBRRRR 

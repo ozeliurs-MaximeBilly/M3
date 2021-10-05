@@ -1,0 +1,27 @@
+------------------------------ en-tête -----------------------------------------
+HLEN............. : 5 (20 octets d'en-tête sans option)
+Longueur totale.. : 1380
+Protocole........ : 17
+Identification... : 12345
+Bit More......... : 0
+Déplacement...... : 600
+Adresse IP Source : 139.124.187.2
+Adresse IP Dest.. : 139.124.187.4
+------------------------------ données -----------------------------------------
+YVXXRBBBBBMMWMBRVtVYYI+IXV=,,:  ,,:,+XBI:        , ,YRXRMRMMMMMBBBMMMMBBBMRRRR 
+=;IYVXBBMMBBXVYYYItIXXIIVI;,::  ,,,:;iXRt          tXRBBRWBMMMMMBBMWMMBBBMBBBB 
+,:iYVVVVVYtIItIVVYi;:;tVVY,:::,,,,,:,;IY;          XBRBRMRBMMMMBMMMMMMMMBBMBBR 
+==tIYYYYYItIYIYVVY+=,  +It:,,,:::, ,  +i:         =BBBMBMBBMMMMMMMMMMMMMBBBBBB 
+,=iiitIIIYtiiIXXI;+;, ,;;:=;:,,,,: :  ;=,         IMRRMRMBMBBBBMMMMMMMMMBBMBBR 
+;it+=ittIYItiiYVt;V=  :,,: ;++;,,, ,  ;;          RWRBWBMBMBRRBMMMMMMMMMBBBRXX 
+;+====+ittYtitIIIVV,  , :::, =I+,:,,, :;:  ,  ,  ;MBBBBMMMMBBBBMMBWWWMMBBBXXYY 
+it=;::;+tIYYYYItYXt    ,:::::,,it ,,,,,,,       ,iMBBBBMMBBBBBMMMMWWWMBRXVIYYV 
+YtVYYYYIti=+itYVXX;  ,  :,;,;; ,+i  ,::,        :VBBBBMMMBBBBMMWMMWMMBXVYYVVXR 
+ViIi=;:::,;iIttIYY,  ,  ,  ;:,:  =+: ,:,        ;BBBBBMMBBBBMMWWMBMBRXVVVVXRRB 
+++itt+==+tIYVVXXRR=     , ,,,,,,, :+=  ,     ,  YBXRRRRXRBRBBRBBXVYYIYVVXXRRRB 
+Iti=;;+tIIYVXXVVXRY:    ,  ,,,,,,, i+  ,       ,XBRXRBMWWWRXRBRRRVIIYVXXRRRBBB 
+i=iittIYYYVVVVVVXXR;    ,,  ,,,,,,:+=,   ,   , ;RBXRMWWWWWXIXMRRBXIYVXXXRBRBBB 
+YI+tYVYIYVVVVXXXXXXt     :  ,,,,,,,++          +RBRRBMMWWWYYXRBBRXYVVXRRRRMRBM 
+YItIVVYYYVVVVXXXXRBY:  , ,,,,,,,,,,i=      ,, ,tBBRRRRRRXXVVVXRBRRVXRRBBBBBRBR 
+VYtIYYYYVVVVXXXXRRBRi     ,,,,,,:::i=  ,   ,, ,IMRBBBBRRRXXVVXRRRXRRRBBBBBRBBV 
+VRVVVVYYYVVXXXXRRRRWV:   ,,,,,,,::;i;  ,   ,: :VWBBBBRRXXXXXRRBBRXRRBBBBBBBMBY 

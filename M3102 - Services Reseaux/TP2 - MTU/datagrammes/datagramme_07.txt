@@ -1,0 +1,12 @@
+------------------------------ en-tête -----------------------------------------
+HLEN............. : 5 (20 octets d'en-tête sans option)
+Longueur totale.. : 90
+Protocole........ : 6
+Identification... : 12345
+Bit More......... : 0
+Déplacement...... : 1200
+Adresse IP Source : 158.159.160.161
+Adresse IP Dest.. : 139.124.187.4
+------------------------------ données -----------------------------------------
+MM 
+                                                          HMMMMMM

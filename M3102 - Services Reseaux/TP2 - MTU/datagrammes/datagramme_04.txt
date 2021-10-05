@@ -1,0 +1,40 @@
+------------------------------ en-tête -----------------------------------------
+HLEN............. : 5 (20 octets d'en-tête sans option)
+Longueur totale.. : 2420
+Protocole........ : 6
+Identification... : 12345
+Bit More......... : 1
+Déplacement...... : 600
+Adresse IP Source : 158.159.160.161
+Adresse IP Dest.. : 139.124.187.4
+------------------------------ données -----------------------------------------
+........M 
+               .........HM     M:  MM :MMMMMM          M           M............... 
+              M..........M     M   MoM M                           M................M 
+              M.........:M  MoH  M M M MooooHoooMM.   M             M...............M 
+              M..........Moooo MMooM    oooooMooooooooM              M..............H 
+              M.........MooooM  Mooo  : ooooooMooooMoooM              M........ . .o.M 
+              H..  .....ooooo   oooo  M MooooooooooooooM               M... MMMMMMMMMMM 
+              MMMMMMMMMMooooM M oooo  .  ooooooMooooooooM              .MMMMMMMMMMMMMMM 
+              MMMMMMMMMMooooH : ooooH    oooooooooooooooo               MMMMMMMMMMMMMMM 
+              MMMMMMMMMMoooo    ooooM    Moooooooooooooooo              .MMMMMMMMMMMMMMM 
+              MMMMMMMMMMoooo    ooooM    MooooooooooooooooM              MMMMMMMMMMMMMMM 
+              MMMMMMMMMMoooM    ooooM     ooooooooooooooooo               MMMMMMMMMMM:M 
+              MMMMMMMMMMoooM   MooooM     oooooooooooMoooooo               MH........... 
+               . ......Mooo.   MooooM     oooooooooooooooooo              M............M 
+              M.M......oooo    MooooM     Moooooooooooooooooo:           .........M..... 
+              M.M.....Moooo    MooooM      ooooooooooooooooooM            .M............ 
+              .......MooooH    MooooM      oooooooooMoooooooooo          M..o...M..o....M 
+              .o....HMooooM    MooooH      MooooooooMooooooooooM          .:M...M.......M 
+             M..M.....MoooM    :oooo:    .MooooooooHooMoooooooooM         M M... ..oM.M 
+              M...M.:.Mooo. MMMMooooo   oooooooooooMoooooooooooooM          ....M. M 
+               M:M..o.Moooooooooooooo MooooooooooooooMooooooooooooM          .Mo 
+                      MooooooooooooooMooooooooooooMoMoooooooooooooo 
+                      Mooooooooooooooo:ooooooooooooooooooooooooooooo 
+                      ooooooooooooooooMooooooooooMoooooooooooooooooo 
+                      ooooooooooooooooMoooooooooooMooooooooooooooooHo 
+                      ooMooooooooooooooMoooooooooooooooooooooooooooMoM 
+                     MooMoooooooooooooo.ooooooooooooooooooooooooooo:oM 
+                     MoooooooooooooooooooooooooooooooooooooooooooooooM 
+                     MoooMooooooooooooooMooooooooooooooooooooooooooooo. 
+                     MoooMooooooooooooooMoooooooooo
