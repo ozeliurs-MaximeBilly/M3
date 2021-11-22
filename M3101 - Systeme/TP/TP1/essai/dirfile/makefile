@@ -13,4 +13,5 @@ libSys.a: file2.cxx ../include/notreEntete.h
 	rm file2.o
 
 clean:
-	rm file1.o
+	rm file1.o;
+	rm libSys.a
