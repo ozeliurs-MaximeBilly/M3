@@ -24,7 +24,8 @@ using namespace nsSysteme; // Stat()
 using namespace std;
 int main (int argc, char * argv []) {
   try {
-  // a ecrire le corps de l'exercice 1
+    printf("File size:  %lld bytes\n", (long long) sb.st_size);
+    printf("Link count: %ld\n", (long) sb.st_nlink);
   }
   catch (const CExc & Exc) {
     cerr << Exc << endl;

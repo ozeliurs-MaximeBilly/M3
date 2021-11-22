@@ -1,0 +1,5 @@
+Question: Quel est le premier répertoire visité pendant l'exécution du make? Quels sont
+les fichiers et/ou répertoires crées par l'exécution du make?
+
+Le premier dossier visité est le ../include.
+Makefile crée codeobjsyst

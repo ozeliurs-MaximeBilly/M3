@@ -24,7 +24,7 @@ $(nom).o : $(nom).cxx $(CEXC_H) $(NSSYSTEME_H)
 # Code Objet pour la bibliotheque Systemes
 # 
 
-codeobjsyst: nsSysteme.o
+general: nsSysteme.o
 	touch codeobjsyst
 #
 nsSysteme.o : nsSysteme.cxx $(CEXC_H) $(NSSYSTEME_H)
