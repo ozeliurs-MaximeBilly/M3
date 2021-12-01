@@ -23,16 +23,8 @@
 using namespace nsSysteme; // Stat()
 using namespace std;
 int main (int argc, char * argv []) {
-  struct stat sb;
   try {
-    stat(argv[1], &sb);
-    printf("Type de Fichier:\n");
-    printf("\tFichier : %s\n", ((bool)S_ISREG(sb.st_mode)) ? "Oui" : "Non");
-    printf("\tRépertoire : %s\n", (S_ISDIR(sb.st_mode)) ? "Oui" : "Non");
-    printf("\tLien Symbolique : %s\n", (S_ISLNK(sb.st_mode)) ? "Oui" : "Non");
-    printf("\tPériphérique : %s\n", (S_ISCHR(sb.st_mode)) ? "Oui" : "Non");
-    printf("\tFIFO : %s\n", (S_ISFIFO(sb.st_mode)) ? "Oui" : "Non");
-    printf("\tSocket : %s\n", (S_ISSOCK(sb.st_mode)) ? "Oui" : "Non");
+  // a ecrire le corps de l'exercice 1
   }
   catch (const CExc & Exc) {
     cerr << Exc << endl;
