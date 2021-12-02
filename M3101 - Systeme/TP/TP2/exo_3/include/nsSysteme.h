@@ -1,7 +1,7 @@
 /**
  *
  * @File : nsSysteme.h
- *
+ * 2011
  * @Synopsis : espace de noms qui contient les prototypes des wrappers
  *             des fonctions systeme
  *
@@ -13,9 +13,10 @@
 #include <cstddef>        // size_t
 
 #include <sys/types.h>    // ssize_t
-                                                    
+
 #include <sys/stat.h>     // struct stat, stat(), fstat()
 
+#include <unistd.h>       // open(), read(), write()
 
 #include "string.h"
 
@@ -27,12 +28,35 @@
 namespace nsSysteme
 {
    void        Stat    (const char * file_name, struct stat * buf);
-                             // throw (CExc)
+                             // throw (CExc);
 
-      
+    void        Close  (int fd);
+                             // throw (CExc);
+
+
+    int         Open   (const char * pathname, int flags);
+                             // throw (CExc);
+    int         Open   (const char * pathname, int flags, ::mode_t mode);
+                             // throw (CExc);
+    std::size_t Read   (int fd, void * buf, std::size_t count);
+                             // throw (CExc);
+    
+    std::size_t Write (int fd, void * buf, std::size_t count);
+
+    void        Stat   (const char * file_name, struct stat * buf);
+                             // throw (CExc);
+
+
 } // nsSysteme
 
+namespace nsFctShell {
 
+   void FileCopy (const char * const Destination,
+                  const char * const Source,
+                  const size_t NbBytes);
+                  // throw (nsSysteme::CExc);
+
+} // nsFctShell
 
 
 //  Definitions courtes des fonctions concernant les fichiers
@@ -47,6 +71,35 @@ void nsSysteme::Stat (const char * file_name, struct stat * buf)
 
 } // Stat()
 
+inline void nsSysteme::Close (int fd)
+	// throw (CExc)
+{
+    if (::close (fd)) throw CExc ("close()", fd);
 
+} // Close()
+
+inline
+std::size_t nsSysteme::Read (int fd, void * buf, std::size_t count)
+    // throw (CExc)
+{
+    ::ssize_t Res;
+    if (-1 == (Res = ::read (fd, buf, count)))
+        throw CExc ("read()", fd);
+
+    return Res;
+
+} // Read()
+
+inline
+std::size_t nsSysteme::Write (int fd, void * buf, std::size_t count)
+    // throw (CExc)
+{
+    ::ssize_t Res;
+    if (-1 == (Res = ::write (fd, buf, count)))
+        throw CExc ("write()", fd);
+
+    return Res;
+
+} // Read()
 
 #endif    /* __NSSYSTEME_H__ */
