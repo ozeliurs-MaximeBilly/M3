@@ -1,12 +1,3 @@
-/**
- *
- * @File : nsSysteme.cxx
- *
- * 2011
- * @Synopsis : definition des wrappers non inline des fonctions syst
- *
-**/
-
 #include <string>
 #include <fcntl.h>       // O_CREAT, open()
 #include <sys/types.h>   // mode_t
@@ -16,12 +7,11 @@
 
 using namespace std;     // string
 
-
 int nsSysteme::Open (const char * pathname, int flags, ::mode_t mode)
 	// throw (CExc)
 {
     int Res;
-    if (!(flags & O_CREAT)) 
+    if (!(flags & O_CREAT))
         throw CExc ("Open()",string (" fichier :") + pathname +
                        ". Un parametre de trop");
     if (-1 == (Res = ::open (pathname, flags, mode)))
@@ -35,7 +25,7 @@ int nsSysteme::Open (const char * pathname, int flags)
 	// throw (CExc)
 {
     int Res;
-    if (flags & O_CREAT) 
+    if (flags & O_CREAT)
         throw CExc ("Open()",string (" fichier :") + pathname +
                     ". Il manque un parametre");
     if (-1 == (Res = ::open (pathname, flags)))
@@ -46,15 +36,15 @@ int nsSysteme::Open (const char * pathname, int flags)
 } // Open()
 
 
-void nsFctShell::FileCopy (const char * const dest, const char * const source, const size_t NbBytes) {
+void nsFctShell::FileCopy (const char * const Destination, const char * const Source, const size_t NbBytes) {
   int src;
   // ouvre le fichier source en mode lecture à l'aide d'un appel système
-  if ((src = nsSysteme::Open(source, O_RDONLY)) == -1) { cout << "Erreur en lecture !!";} else {
-  
+  if ((src = nsSysteme::Open(Source, O_RDONLY)) == -1) { cout << "Erreur en lecture !!";} else {
+
     int dst;
     // ouvre le fichier destination en mode écriture, création et troncature l'aide d'un appel système
-    if ((dst = nsSysteme::Open(dest, O_WRONLY | O_CREAT, 0700)) == -1) { cout << "Erreur en ecriture !";} else {
-      
+    if ((dst = nsSysteme::Open(Destination, O_WRONLY | O_CREAT, 0700)) == -1) { cout << "Erreur en ecriture !";} else {
+
       // réserve un tampon mémoire de NbBytes +1 octets
       unsigned char tampon[NbBytes+1];
       // tant qu'on peut lire du fichier source (i.e. l'appel système Read() n'est pas nul

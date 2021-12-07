@@ -1,0 +1,16 @@
+exo_03 :
+--------
+- ce programme permet de récupérer (grâce à stat()) la taille en octets d'un "morceau" spécifié
+  char, all, ou block, dans un fichier source et d'effectuer ensuite la copie de ce fichier
+  source par morceaux tel que passé en paramètre à write()
+- ajouter #include <unistd.h> à nsSysteme.h pour les appels de open(), read() et write()
+- dans l'énoncé de l'exo 3, DonneTailleOctets() est à remplacer par DonneTailleMorceau()
+- dans le corrigé, O_APPEND doit REMPLACER (!) O_TRUNC dans les drapeaux passés dans l'appel
+  const int fdest = nsSysteme::Open(Destination, O_CREAT|O_TRUNC|O_WRONLY|(syn?O_SYNC:0),0700)
+  autrement dit, on doit écrire
+  const int fdest = nsSysteme::Open(Destination, O_CREAT|O_APPEND|O_WRONLY|(syn?O_SYNC:0),0700)
+  puisque O_APPEND ajoute à la fin du fichier alors qu'O_TRUNC tronque le fichier...
+- NBytes+1 : +1 permet un caractère vide à la fin du buffer, on peut donc y mettre (par exemple) '\0'
+  ce qui permet ensuite (exo_04) d'injecter directement le tampon (chargé avec donnees.fic) sur le flux
+  de sortie
+

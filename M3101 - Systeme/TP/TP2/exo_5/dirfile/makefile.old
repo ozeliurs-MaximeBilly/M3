@@ -1,0 +1,11 @@
+exo_04.exe : exo_04.o nsSysteme.o
+	g++ -o exo_04.exe exo_04.o -I ../include/;
+
+exo_04.o : exo_04.cxx 
+	g++ -c exo_04.cxx -I ../include/;
+
+nsSysteme.o : nsSysteme.cxx
+	g++ -c nsSysteme.cxx -I ../include/;
+
+clean :
+	rm *.o;
