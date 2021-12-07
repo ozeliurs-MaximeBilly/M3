@@ -86,13 +86,14 @@ void nsFctShell::Destroy (const char * const File) {
 //Definitions des fonctions pour les signaux
 ////////////////////////////////////////////////////////////////////
 
-sighandler_t nsSysteme::Signal (int NumSig, sighandler_t NewHandler)
-                               // throw (CExc)
-{
-  sighandler_t sigh;
-  if (sigh = signal(NumSig, NewHandler);) {
-    throw CExc ("signal()", "jsp");
-  }
+sighandler_t nsSysteme::Signal (int NumSig, sighandler_t NewHandler) {
 
-  return sigh
+  struct sigaction NewH;
+  struct sigaction OldH;
+
+  NewH.sa_handler = NewHandler;
+
+  ::sigaction(NumSig, &NewH, &OldH);
+
+  return OldH.sa_handler;
 } // Signal()

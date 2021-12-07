@@ -26,6 +26,8 @@
 //  Declarations des fonctions concernant les fichiers
 //  =========================================================
 
+typedef void (*sighandler_t)(int);
+
 namespace nsSysteme
 {
     void        Stat    (const char * file_name, struct stat * buf);
@@ -55,7 +57,7 @@ namespace nsSysteme
 
     // Fonctions concernant les repertoires
     // ====================================
-    // 
+    //
 
     void        ChDir   (const char * path);
                              // throw (CExc)
@@ -73,20 +75,19 @@ namespace nsSysteme
 
     // Fonctions concernant les signaux
     // ====================================
-    // 
+    //
                              // throw (CExc)
 
-    void         Sigaction (int signum, 
-                            const struct sigaction * act, 
+    void         Sigaction (int signum,
+                            const struct sigaction * act,
                             struct sigaction * oldact);
                             // throw (CExc)
 
-    sighandler_t Signal    (int NumSig, sighandler_t NewHandler);
-                           // throw (CExc)
+    sighandler_t Signal (int NumSig, sighandler_t NewHandler);
 
     const int CstSigMax = 32;
 
-      
+
 } // nsSysteme
 
 
@@ -95,11 +96,11 @@ namespace nsSysteme
 //  =========================================================
 
 namespace nsFctShell {
- 
-  void FileCopy (const char * const Destination,  
-		   const char * const Source, 
-           const size_t       NbBytes, 
-		   const bool         syn = false); 
+
+  void FileCopy (const char * const Destination,
+		   const char * const Source,
+           const size_t       NbBytes,
+		   const bool         syn = false);
 	       // throw (nsSysteme::CExc)
 
 
@@ -132,7 +133,7 @@ void nsSysteme::Close (int fd) // throw (CExc)
 
 
 
-inline 
+inline
 std::size_t nsSysteme::Read (int fd, void * buf, std::size_t count)
     // throw (CExc)
 {
@@ -156,7 +157,7 @@ inline std::size_t nsSysteme::Write (int fd, const void * buf,
 
 } // Write()
 
-inline 
+inline
 void nsSysteme::Unlink (const char * pathname)
     // throw (CExc)
 {
@@ -178,30 +179,30 @@ void nsSysteme::LStat (const char * file_name, struct stat * buf)
 //  ============================================================
 
 inline
-void nsSysteme::ChDir(const char * path) // throw (CExc) 
+void nsSysteme::ChDir(const char * path) // throw (CExc)
 {
   if(::chdir(path))
     throw CExc ("chdir()", path);
 } // ChDir()
 
 inline
-void nsSysteme::GetCwd(char * path, size_t taille) // throw (CExc) 
+void nsSysteme::GetCwd(char * path, size_t taille) // throw (CExc)
 {
   if(::getcwd(path, taille) == 0)
     throw CExc ("getcwd()", path);
 } // GetCwd()
 
 inline
-DIR *nsSysteme::OpenDir(const char * dir_name) // throw (CExc) 
+DIR *nsSysteme::OpenDir(const char * dir_name) // throw (CExc)
 {
   DIR *pDir;
-  if((pDir = ::opendir (dir_name)) == 0) 
+  if((pDir = ::opendir (dir_name)) == 0)
         throw CExc ("dir()", dir_name);
   return pDir;
 } // Opendir()
 
-inline 
-dirent * nsSysteme::ReadDir(DIR * dirStreamP) // throw (CExc) 
+inline
+dirent * nsSysteme::ReadDir(DIR * dirStreamP) // throw (CExc)
 {
   errno = 0;
   dirent * pEntry (::readdir(dirStreamP));
@@ -214,23 +215,23 @@ dirent * nsSysteme::ReadDir(DIR * dirStreamP) // throw (CExc)
 } // ReadDir()
 
 inline
-void  nsSysteme::CloseDir(DIR * dirStreamP) // throw (CExc) 
+void  nsSysteme::CloseDir(DIR * dirStreamP) // throw (CExc)
 {
-  if(::closedir(dirStreamP)) 
+  if(::closedir(dirStreamP))
     throw CExc ("closedir()", "");
 
 } // CloseDir()
 
-//  Fonctions concernant les signaux 
+//  Fonctions concernant les signaux
 
-inline void nsSysteme::Sigaction (int signum, 
-                                  const struct sigaction * act, 
-                                  struct sigaction * oldact) 
-                                  // throw (CExc) 
-{ 
-    if (::sigaction (signum, act, oldact)) 
-        throw CExc ("sigaction()",""); 
+inline void nsSysteme::Sigaction (int signum,
+                                  const struct sigaction * act,
+                                  struct sigaction * oldact)
+                                  // throw (CExc)
+{
+    if (::sigaction (signum, act, oldact))
+        throw CExc ("sigaction()","");
 
-} // Sigaction() 
+} // Sigaction()
 
 #endif    /* __NSSYSTEME_H__ */

@@ -4,6 +4,7 @@
 #include <sys/stat.h> // struct stat
 #include <fcntl.h>
 #include "string.h"
+#include <unistd.h>
 
 #include "CExc.h"
 
@@ -38,6 +39,7 @@ int main (int argc, char * argv []) {
     cout << endl;
 
     cout << "Je fais qqch" << endl;
+
   }
   catch (const CExc & Exc) {
     cerr << Exc << endl;

@@ -10,7 +10,7 @@
 
 
 namespace {
-  int Derout(int signum){
+  void Derout(int signum){
     std::cout << "Signal " << signum << " recu = " << strsignal(signum) << "." << std::endl;
   }
 }
@@ -21,12 +21,17 @@ using namespace std;
 int main(int argc, char * argv [])
 {
   try {
+    for(int i = 1; i<63 ; ++i) {
+        Signal(i, Derout);
+    }
 
-    Signal(2, Derout);
+  for(int i = 1; i<63 ; ++i) {
+      if (i!=9 && i!=18 && i!=19){
+        raise(i);
+      }
+  }
 
-    raise(SIGINT);
 
-///code
     return 0;
   }
   catch (const CExc & Exc) {
